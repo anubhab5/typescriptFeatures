@@ -117,3 +117,49 @@ let unionDemoVariable: string | number;
 unionDemoVariable = 5;
 unionDemoVariable = "testStringValue";
 // unionDemoVariable = true; // It will throw a error.
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Custom Type
+/*
+Custom Type can be defined with the keyword type, followed by the types */
+type stringNumberType = string | number;
+
+let customTypeDemo: stringNumberType = 'a';
+customTypeDemo = 'a';
+customTypeDemo = 6;
+// customTypeDemo = true; // will throw an error 
+
+// NOTE: We can also use union along with type
+type User = { name: string, age: number };
+let typePersonDemo: User = {
+    name: ' Ajay',
+    age: 6
+};
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Function
+
+// Return type can be debined in a function like below
+function addNumberWithReturnValue(number1: number, number2: number): number {
+    return number1 + number2;
+}
+
+function addNumberReturnVoid(number1: number, number2: number): void {
+    console.log(number1 + number2);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Function as Types
+let addNumberVariable: (a: number, b: number) => void;
+addNumberVariable = addNumberWithReturnValue;
+// This code will throw an error as return type is not matching
+addNumberVariable = addNumberReturnVoid;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// TBD 
+// never, unknown ---> TBD
