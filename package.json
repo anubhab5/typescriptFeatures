@@ -1,0 +1,21 @@
+{
+  "name": "typescriptfeatures",
+  "version": "1.0.0",
+  "description": "This project describes all the features of Typescript step by step",
+  "main": "app.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anubhab5/typescriptFeatures"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "Anubhab Mukherjee",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
