@@ -1,0 +1,6 @@
+Content on Advanced Typescript - 
+    1. Intersection Type
+    2. Type Guards
+    3. Discriminated Unions
+    4. Type Casting
+    5. Functional Overloads

@@ -80,3 +80,4 @@ console.log(howard.getDepartment); // Getting the newly set value;
 // Accessing a static type
 Employee.employeeHelpDeskNumber = 'asasasa';
 console.log(Employee.employeeHelpDeskNumber);
+Employee.checkEmployeeCount();
