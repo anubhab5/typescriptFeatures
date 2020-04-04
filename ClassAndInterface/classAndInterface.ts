@@ -22,6 +22,24 @@ class Person {
 class Employee extends Person {
     private department: string;
 
+    // static 
+    /*
+        A member or a method can be marked as static by appending the keyword static
+        Once a method or a property is marked static then it can be accessed from outside with the className itself.
+        To refer a static type object is not required.
+        eg: Employee.employeeHelpDeskNumber ==> Here the property <employeeHelpDeskNumber> is made static
+        so it can be accessed from outside the class in the above shown way
+        Cannot be accessed using this keyword
+    */
+    // Static  property
+    static employeeHelpDeskNumber: string = '9876543210';
+
+    // Static  method
+    //
+    static checkEmployeeCount() {
+        // some Logic implemented
+    }
+
     constructor(name: string, department: string) {
         super(name);
         this.department = department;
@@ -51,9 +69,14 @@ class Employee extends Person {
 }
 
 let howard = new Employee("Howard", "Sales");
+
 // accessing the getter of the Employee class
 console.log(howard.getDepartment);
+
 // Note: They are accessed as Properties. i.e. with out the parenthesis ()
 howard.setDepartment = 'Marketing'; // This will set the value as Marketing in the department field;
 console.log(howard.getDepartment); // Getting the newly set value;
 
+// Accessing a static type
+Employee.employeeHelpDeskNumber = 'asasasa';
+console.log(Employee.employeeHelpDeskNumber);
