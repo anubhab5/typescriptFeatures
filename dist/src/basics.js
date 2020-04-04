@@ -1,3 +1,4 @@
+"use strict";
 /*
 Core Types in Typescript
 Fllowing are the coretypes in TypeScript (TS)-
@@ -97,3 +98,38 @@ var CustomRoleValueAgain;
 })(CustomRoleValueAgain || (CustomRoleValueAgain = {}));
 ;
 console.log(CustomRoleValueAgain.PUBLISHER); // value 21 will be printed
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// UNION TYPE
+/*
+A union type allows us to define a variable with multiple types.
+This is achieved by using the pipe ( '|' ) symbol between the types
+*/
+// In the below example the variable can hold either string type or number type
+var unionDemoVariable;
+unionDemoVariable = 5;
+unionDemoVariable = "testStringValue";
+var customTypeDemo = 'a';
+customTypeDemo = 'a';
+customTypeDemo = 6;
+var typePersonDemo = {
+    name: ' Ajay',
+    age: 6
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// Function
+// Return type can be debined in a function like below
+function addNumberWithReturnValue(number1, number2) {
+    return number1 + number2;
+}
+function addNumberReturnVoid(number1, number2) {
+    console.log(number1 + number2);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// Function as Types
+var addNumberVariable;
+addNumberVariable = addNumberWithReturnValue;
+// This code will throw an error as return type is not matching
+addNumberVariable = addNumberReturnVoid;
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// TBD 
+// never, unknown ---> TBD
